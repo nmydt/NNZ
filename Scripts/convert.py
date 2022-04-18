@@ -62,7 +62,7 @@ def SingleConvert(filePath,repo,index):
         for i in tuple_:
             r = r.replace(i[0],i[1])
             
-        match = list(filter(lambda x:"https://cdn.jsdelivr.net/" not in x and "NNZ" not in x, re.findall(r'href="(.*?)"',r)))
+        match = list(filter(lambda x:"https://cdn.jsdelivr.net/" not in x and "nnz" not in x, re.findall(r'href="(.*?)"',r)))
         tuple_ = list(zip(match,list(map(lambda y:UrlFactory(y),map(lambda x:f"{repo}/"+x,match)))))
         for i in tuple_:
             r = r.replace(i[0],i[1])
