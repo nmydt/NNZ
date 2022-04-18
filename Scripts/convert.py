@@ -56,18 +56,13 @@ def SingleConvert(filePath,repo,index):
     
     if index==1:  #     github => cdn       
         #    repo = "https://github.com/nmydt/LearningNote/tree/main/Concurrent"
-        match = list(filter(lambda x:"https://cdn.jsdelivr.net/" not in x and "music" not in x, re.findall(r'src="(.*?)"',r)))
-        tuple_ = list(zip(match,list(map(lambda y:UrlFactory(y),map(lambda x:f"{repo}/"+x,match)))))
-        for i in tuple_:
-            r = r.replace(i[0],i[1])
-
         ## html
         match = list(filter(lambda x:"https://cdn.jsdelivr.net/" not in x and "music" not in x, re.findall(r'src="(.*?)"',r)))
         tuple_ = list(zip(match,list(map(lambda y:UrlFactory(y),map(lambda x:f"{repo}/"+x,match)))))
         for i in tuple_:
             r = r.replace(i[0],i[1])
             
-        match = list(filter(lambda x:"https://cdn.jsdelivr.net/" not in x and "music" not in x, re.findall(r'src="(.*?)"',r)))
+        match = list(filter(lambda x:"https://cdn.jsdelivr.net/" not in x and "NNZ" not in x, re.findall(r'href="(.*?)"',r)))
         tuple_ = list(zip(match,list(map(lambda y:UrlFactory(y),map(lambda x:f"{repo}/"+x,match)))))
         for i in tuple_:
             r = r.replace(i[0],i[1])
