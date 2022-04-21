@@ -78,7 +78,7 @@ def SingleConvert(filePath,repo,index):
     f.close()
 
 if __name__ == '__main__':
-    find_res = findAllSuffix("/home/runner/work/NNZ/NNZ")
+    find_res = findAllSuffix("D:\\桌面\\2022\\html")
     path_glo = "https://github.com/nmydt/NNZ/tree/main/"
     for path in find_res:
         print(path)
