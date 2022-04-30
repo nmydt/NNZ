@@ -37,10 +37,11 @@ jobs:
 
 
       - name: 'Working'
+        
         env:
           PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
         run: |
-
+           
            echo "$PRIVATE_KEY"
            echo hello
   #           python /home/runner/work/NNZ/NNZ/Scripts/convert.py
