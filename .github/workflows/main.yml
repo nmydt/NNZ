@@ -38,7 +38,7 @@ jobs:
 
       - name: 'Working'
         run: |
-           echo "${ PRIVATE_KEY }"
+
            echo "${{ PRIVATE_KEY }}"
            echo hello
   #           python /home/runner/work/NNZ/NNZ/Scripts/convert.py
